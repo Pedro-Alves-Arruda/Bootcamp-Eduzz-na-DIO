@@ -1,0 +1,411 @@
+			  	BOOTCAMP EDUZZ NA DIO
+Lógica de programação
+Metacognição -> “pensar como você pensa”
+O QUE É LÓGICA ? sequencia coerente, regular e necessária de acontecimentos, coisas.
+Lógica de programação significa apenas contextualizar a lógica na programação de computadores, buscando a melhor sequência de ações 	para solucionar um problema.
+“Abstração é a habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes ou acidentais”
+O que é algoritmo? sequencia de passos para resolver um determinado problema.
+O que é pseudocódigo? Pseudocódigo é uma forma genérica de escrever um algoritmo, utilizando uma linguagem simples(nativa, ou seja, em português a quem escreve, de forma a ser entendida por qualquer pessoa).
+Fluxograma -> é uma ferramenta utilizada para representar graficamente algoritmo, isto é, uma sequência lógica e coerente do fluxo de dados. Um fluxograma é um tipo de diagrama pode ser entendido como uma representação esquemática de um processo. Podemos entende-lo, na prática, como a documentação dos passos necessários para a execução de um processo qualquer.
+O que são variáveis?
+Na programação, variáveis são objetos(uma posição, frequentemente localizada em um espaço da memória, destinado a um dados que é alterado durante a execução de um programa) capaz de reter e representar um valor ou uma expressão.
+Podem ser classificadas em quatro tipos: Numericas, caracteres, alfanuméricas ou logicas
+O que é uma constante?
+È uma variável cuja valor não pode ser alterado durante a execução do algoritmo.
+
+				TOMADAS DE DECISÕES E EXPRESSÕES
+“São expressões que utilizam operadores aritméticos e funções aritméticas envolvendo constantes e variáveis.”
+Ex: 
+50 +50
+Total + 50
+
+ 
+
+				Expressões literais
+São expressões com constantes e/ou variáveis que tem como resultado valores literais. Iremos utilizar as expressões literais na atribuição de valor para uma variável ou constante.
+Ex: 
+Nome = “jose”
+Nome <- “jose”
+Media <- (n1+n2)/2
+
+ 
+
+				OPERADORES RELACIONAIS
+“São expressões compostas por outras expressões ou variáveis numéricas com operadores relacionais. As expressões relacionais retornam valores lógicos” (verdadeiro/falso)
+
+ 
+
+					TOMADAS DE DECISÃO
+Quando escrevemos programas, geralmente ocorre a necessidade de decidir o que fazer dependendo de alguma condição encontrada durante a execução.
+
+					CONCATENAÇÃO
+Concatenação é um termo usado em computação para designar a operação de unir o conteúdo de duas strings*.
+*String é uma sequencia de caracteres.
+
+					DEFINIÇÃO
+Agrupamento de duas ou mais células que, incluindo fórmulas, textos ou outras informações contida no seu interior, dá origem a um único resultado.
+
+				ESTRUTURA DE REPETIÇÃO
+Dentro da lógica de programação é uma estrutura que permite executar mais de uma vez o mesmo comandou conjunto de comandos, de acordo com uma condição ou com um contador
+				 LINGUAGEM DE PROGRAMAÇÃO
+Linguagem de programação é uma linguagem escrita e formal que especifica um conjunto de instruções e regras usadas para gerar programas(software). Um software pode ser desenvolvido para rodar em um computador, dispositivo móvel ou em qualquer equipamento que permita sua execução.
+O que é obvio para você, certamente não é obvio para uma máquina. E se você quer que a máquina faça algo para você, você precisa, “falar com ela”.
+A função das linguagens de programação é servir de um meio de comunicação entre computadores e humanos.
+					BAIXO E ALTO NÍVEL 
+Alto nível
+Essas são aquelas cuja sintaxe se aproxima mais da nossa linguagem e se distanciam mais da linguagem de maquina.
+Baixo nível
+É aquela que se aproxima mais da linguagem de máquina. Essas são as que você precisa ter o conhecimento direto da arquitetura do computador para fazer alguma coisa.
+
+				COMPILADAS OU INTERPRETADAS
+ Compiladas 
+É uma linguagem de programação em que o código fonte, é executado diretamente pelo sistema operacional ou pelo processador, após ser traduzido por meio de um processo chamado compilação.
+
+Interpretadas 
+É uma linguagem de programação em que o código fonte é executado por um programa de computador chamado interpretador que em seguida é executado pelo sistema operacional ou pelo processador.
+
+					PORTUGOL
+“Portugol é uma pseudolinguagem que permite ao leitor desenvolver algoritmos estruturados em português de forma simples e intuitiva, independentemente de linguagem de programação, permite ao programador pensar no problema em si e não no equipamento que irá executar o algoritmo.”
+
+				DESVIOS CONDICIONAIS 
+“È utilizada a palavra reservada se, a condição a ser testada entre parênteses e as instruções que devem ser executadas entre chaves caso o desvio seja verdadeiro”
+				SE – SENÃO
+Agora vamos imaginar que se a condição for falsa um outro conjunto de comandos deve ser executado. Quando iremos encontrar essa situação?
+
+					CASO
+Este comando é similar aos comandos se e senão, e reduz a complexidade na escolha de diversas opções. Apesar da sua similaridade com o se, ele possui algumas diferenças. Neste comando não é possível o uso de operadores lógicos, ele apenas trabalha com valores definidos
+
+					MATRIZ
+Uma matriz é uma coleção de variáveis de mesmo tipo, acessíveis com um único nome e armazenados contiguamente na memória.
+A individualização de cada variável de um vetor é feita através do uso de índices.
+Os vetores são matrizes de uma só dimensão
+
+					SCRUM
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+RESPOSTA LETRA B
+
+ 
+
+
+					PAPEIS E RESPONSABILIDADES
+(PO) – Product owner
+(SM) – Scrum Master
+(DEV) – Time de desenvolvimento (de 3 a 9 pessoas)
+
+
+Product owner
+Papeis e responsabilidades
+Representante da área de negócios;
+PO não é um comitê;
+Define as funcionalidades do software(Product Backlog);
+Prioriza as funcionalidades de acordo com o valor do negócio;
+Garante que o time de desenvolvimento entenda os itens do Backlog no nível necessário;
+
+
+Scrum Master
+Papéis e funcionalidades
+
+Garantir o uso correto do Scrum;
+Scrum Master não é gerente de projetos;
+Age como facilitador;
+Auxilia o Product Owner no planejamento e estimativas do backlog;
+Auxilia a equipe a remover impedimentos;
+Treina o time em autogerenciamento e interdisciplinaridade;
+
+
+Time de desenvolvimento
+Papéis e responsabilidades
+
+Possui habilidades suficientes para desenvolver, testar, criar e desenhar, ou seja, tudo que for necessário para entregar o software funcionando.
+
+ 
+RESPOSTA LETRA D
+
+ 
+RESPOSTA LETRA A
+
+ 
+RESPOSTA LETRA B
+
+					CERIMONIA SCRUM
+Time box
+Tempo máximo para se fazer uma cerimonia scrum ou sprint
+
+Cerimonia scrum
+Sprint = arracanda
+É o principal evento da SCRUM
+Duração de 1 sprint:
+	30 dias corridos(ou menos);
+Sprint
+Composição de uma sprint:
+Planejamento da sprint
+Reuniões diárias (daily meeting)
+Revisão da sprint (review)
+Retrospectiva da sprint
+ 
+
+ 
+
+REVISÃO DA SPRINT
+Time DEV apresenta para o PO o trabalho feito.
+
+Retrospectiva da sprint
+Reunião da equipe para lições aprendidas 
+TRANSPARENCIA
+
+ 
+
+					PRODUCT OWNER
+Quem é o Product Owner? O product owner(PO) representa o profissional que tem a visão do que será desenvolvido, as necessidades a serem atendidas, o público que vai utilizar os serviços e os objetivos a serem alcançados.
+
+ 
+ 
+
+Realease planning 
+Liberação ou lançamento de software(em inglês: release) é o lançamento de nova versão oficial de produto de software. Cada vez que eu produto de software é criado ou modificado, o fabricante e seus desenvolvedores decidem sobre como distribuir ou o novo produto ou a modificação às pessoas que o utilizam.
+Existem dois tipos de realease planning:
+Realease planning de múltiplas escolhas.
+Realease planning de Projeto.
+
+
+				DEFINIÇÃO DE ESCOPO E PRIORIDADE
+ 
+
+
+					PRODUCT BACKLOG
+O product backlog é composto por épicos e estórias.
+Épicos = incremento sem muito detalhamento, ajuda a te direcionar os caminhos que deve seguir.
+Estória = detalhamento dos épicos, um épico normalmente se divide em várias estórias, onde ficam descritas o que deve acontecer e suas regras de negócio.
+ 
+
+
+				ESCREVENDO UMA ESTORIA
+Nome da estória 
+Descrição da estória (eu, como, quero, quando).
+Regras de negócio (separar regras de front-end e back-end)
+Tela (Link ou imagens das telas a serem desenvolvidas)
+KPI (Quais os objetivos/valor a estória precisa atingir)
+Tagueamento (como a estória será “tagueada” pode mensurar os KPI)
+Criterios de aceite (Qual o passo a passode todas os caminhos felizes possíveis a estória deve cumprir para que ela seja considerada aceita)
+
+
+				RISCOS POSITIVOS
+Positivos = muito ignorado nos projetos, porém um dos fatores de maiores ganhos no desenvolvimento de sistemas.
+Negativos = itens que podem afetar o prazo, custo ou escopo de um projeto de maneira que pode acabar inviabilizando-o.
+
+ 
+
+ 
+
+
+ 
+
+
+			PAPEL DO PO NA TRANSFORMAÇÃO DIGITAL
+A transformação digital é um processo no qual as empresas fazem uso da tecnologia para melhorar desempenho, aumentar o alcance e garantir resultados melhores.
+É uma mudança estrutural nas organizações dando um papel essencial para a tecnologia
+
+
+Estorias vs Tarefas
+
+ 
+
+ 
+
+ 
+
+
+CRITERIOS DE ACEITE, ESTIMATIVA E PLANEJAMENTO DE TAREFAS 
+
+O QUE É UM CRITERIO DE ACEITE?
+É uma lista de critérios que precisam ser alcançados para que a user story atenda os requisitos do usuário e seja aceita pelo product owner.
+Os critérios de aceitação têm o objetivo de: definir limites para as user stories. Ajudar o P.O. a detalhar em alto nível o que é necessário para entregar valor ao cliente.
+
+ 
+ 
+
+ 
+
+RELACIONAMENTO CLIENTE X STAKEHOLDER
+O stakeholder é uma pessoa ou grupo que legitima as ações de uma organização e que tem papel  direto ou indireto na gestão e resultados dessa mesma organização. Desta forma, um stakeholder pode ser afetado positivamente ou negativamente, dependendo das suas politicas e forma de atuação.
+Alguns exemplos de stakeholders de uma empresa podem ser os seus funcionários, gestores, gerentes, proprietários, fornecedores, concorrentes, ONG’s, clientes, o estado, credores, sindicatos e diversas outras pessoas ou empresas que estejam relacionadas com uma determinada ação ou projeto.
+ 
+
+ 
+
+REFINAMENTO
+Time de desenvolvimento se junta com PO para discutirem como será a próxima sprint, para tirar duvidas e discutir quais serão os entregáveis.
+REVIEW
+Apresentam o trabalho feito e tiram duvidas do projeto, todos os interessados são convidados para ela. A ideia é ver se o projeto está como proposto, se agrega valor e etc...
+
+ 
+
+ 
+
+ 
+
+O time maduro é o time que anda sozinho 
+
+GIT E GITHUB
+
+Criado pelo linus Torvalds
+
+GUI X CLI
+ 
+ 
+
+Dir -> ele lista todas as pastas e arquivos presentes naquele local ->windows
+Ls -> ele lista todas as pastas e arquivos presentes naquele local -> Linux
+Os comandos podem pedir ou necessitar de flags, que são “parametros” que nós passamos que podem alterar o resultado devolvido pelo nosso comando.
+
+Cd / -> ele me leva pra base do diretório C ->(Windows e Linux)
+
+Cd Windows -> ele entra na pasta Windows ->(windows)
+Cd ets -> ele entra em uma pasta do sistema operacional Linux -> (linux)
+Cd .. -> ele retrocede um nível na navegação ->(Windows e linux)
+Cls -> limpa o terminal Windows 
+Clear -> limpa o terminal Linux
+
+Tab -> completa códigos, por ex: se eu digitar cd W + tab ele completa para cd Windows, muito útil para comandos grandes.
+
+Mkdir -> cria pasta em terminal Windows
+
+Echo -> ele mostra o que foi escrito no próprio terminal.
+Echo hello > hello.txt  -> ele redireciona o que foi escrito para o meu arquivo hello.txt, isso é feito através do “>” (símbolo de maior).
+
+Del workspace -> deleta os arquivos dentro da pasta workspace, para o windows existe diferença entre deletar arquivos e deletar o repositório em si.
+
+Rmdir workspace /S  /Q -> ele irá deletar a minha pasta workspace com todos os arquivos dentro. (Rm -> remove dir-> directory rmdir -> remove directory)
+Rm  -rf workspace -> ele remove o diretório workspace no Linux. O “-r” é para que ele entenda que é para apagar todas as outras pastas dentro de workspace, pastas dentro de pastas e assim por diante, ele irá apagar tudo. “-f” para ele executar esta ação sem pedir confirmação.
+
+				TOPICOS FUNDAMENTAIS DO GIT
+SHA1
+Objetos fundamentais 
+Sistemas distribuído
+Segurança
+A sigla SHA significa Secure Hash Algorithm (Algoritmo de hash seguro), é um conjunto de funções hash criptografadas projetadas pela NSA(Agencia nacional de segurança dos EUA).
+A encriptação gera um conjunto de caracteres identificador de 40 digitos.
+É uma forma curta de representar um arquivo.
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+CHAVE SSH E TOKEN 
+Chave SSH
+É uma forma segura e encriptada de estabelecer uma conexão entre duas maquinas
+Para gerar a minha chave ssh eu tenho que seguir os passos abaixo:
+1: abrir o git bash
+2: digite ssh-keygen
+3: grave o local que foi criado as chaves publicas e privadas
+4: insira sua chave no github na aba configurações/chave ssh
+5:volte ao gitbash e inicialize o agente que inicializara o processo que gerencia essas chaves para que elas funcionem da forma correta que se espera. Para isso use o comando eval $(ssh-agent -s) ele irá retornar a mensagem agente pid 1382 (lembrando que esse numero final é aleatório).
+6: após é necessário adicionar a chave privada para esse agente. Para isso digite ssh-add + nome da chave privada
+Ex: ssh-add id_rsa
+O console ira retornar a mensagem: identity added: id_rsa(pedro@DESKTOP-FVE9IIQ)
+LEMBRANDO QUE PODE VARIAR A MENSAGEM DE ACORDO COM CADA COMPUTADOR E DE ACORDO COM O NOME DE CADA CHAVE, APENAS O INICIO(IDENTITY ADDED) QUE É PADRÃO
+
+		CLONANDO REPOSITORIO POR MEIO DO GITBASH
+1: Entre no repositório que deseja copiar, e copie a chave ssh na aba código.
+ 
+	
+2: após isso vá no terminal gitbash e digite o comando “git clone + link ssh do repositorio”
+
+ 
+O terminal irá pedir a confirmação para continuar com a ação e após tendo feito ele irá terminar a clonagem. Após isso basta digitar o comando ls para  listar o conteúdo da pasta e fazer uma verificação para ver se a clonagem deu certo.
+
+				
+				TOKEN PESSOAL DE ACESSO AO GITHUB
+1: vá na aba configurações do github.
+	 
+
+2: vá opção configurações do desenvolvedor
+ 
+
+4: clique na opção Tokens de acesso pessoal
+ 
+
+5: Gerar novo token
+ 
+
+6: Após o github gerar o token, salve-o em um arquivo seguro, pois esse token será usado para autenticação em clonagem de repositório do git feito por chave htttps.
+
+				COMANDOS COM GIT
+Comandos para iniciar o git, iniciar um versionamento e criar o primeiro commit.
+Git init -> inicia o git
+Git add -> mover arquivos
+Git commit -> fazer um commit
+Todos os comandos do git levam um git antes do comando especial, esse git antes é um chamado ao git para que o terminal entenda que os próximos comandos são especiais do git.
+
+Ls -a -> mostra pastas ocultas dentro de outras pastas
+
+Antes de criar o seu primeiro repositório e gerencia-lo, o git irá pedir algumas configurações básicas, que são o email e o nome do autor desse repositório. Para passar esses dados basta usar os seguintes comandos(um de cada vez)
+Git config - -global user.email youremail@gmail.com
+Git config - - global user.name yourname
+Global no comando serve para indicar que essa configuração de nome e email também deve ser usada para outros repositórios criados 
+OBS: antes da palavra global é usado o traço, traço sem espaço, ou seja, o comando é git config traço,traço global user. Name ou email + youremail or yourname.
+
+
+Git add *
+Git commit -m “commit inicial”
+
+Para fazer um commit é necessário digitar esses dois comandos no terminal bash, entre as aspas é a mensagem que eu enviarei junto com meu commit. Por ex: se eu fizer uma alteração no titulo, então a mensagem seria (titulo alterado).
+
+				CICLO DE VIDA DOS ARQUIVOS
+
+
+
+
+  
+
+ 
+
+O comando git status é responsável por nos dizer se aquele arquivo está em alguns desses estados: untracked, unmodified, modified e staged
+
+Mv strogonoff.md ./receitas/
+O comando acima irá mover o meu arquivo strogonoff.md para dentro da minha pasta receitas.
+
+ 
+
+ 
+
+
+			APAGANDO CONFIGURAÇÕES DE NOME E EMAIL
+Para apagar as informações que foram cadastradas por meio do git config –global  user.name ou user.email basta usar o comando:
+Git config –global –unset user.name ou user.email
+Ele irá apagar as informações que eu cadastrei.
+
+				TRABALHANDO COM GIT E GITHUB
+
+Para linkar meu git ao meu github eu preciso digitar o seguinte comando no meu terminal bash
+Git remote add origin + url do perfil github
+Após isso você pode rodar o comando git remote -v que vai listar os repositórios que agora você está linkado. A palavra origin antes da URL do perfil funciona como um apelido para esse repositório que estamos nos linkando. A url do perfil que será usado no código de linkagem pode ser encontrada no próprio github 
+
+ 
+
+Para mandar os nossos arquivos feitos na maquina do nosso repositório local para o nosso repositório remoto é necessário o comando git push origin master. O “push” significa empurrar, ou seja, estamos empurrando o nosso repositório local para algum lugar. Para onde? Para o nosso “origin”, que é o link do nosso repositório remoto la no github.
+
+			PUXANDO MEU CODIGO DO REPOSITORIO REMOTO
+Para puxar as alterações que foram feitas la no meu repositório remoto para o meu local e assim manter as versões em sincronia é preciso rodar o comando abaixo no bash
+Git pull origin master
+Pull significa literalmente puxar, eu estou mandando ele puxar os meus códigos e os arquivos bem como todo o meu repositório e suas alterações lá do meu repositório remoto, ele sabe qual é o repositório graças ao “apelido” que a gente deu pra ele quando eu adicionei um repositório. 
