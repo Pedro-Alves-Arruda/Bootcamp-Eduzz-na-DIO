@@ -409,3 +409,922 @@ Para mandar os nossos arquivos feitos na maquina do nosso repositório local par
 Para puxar as alterações que foram feitas la no meu repositório remoto para o meu local e assim manter as versões em sincronia é preciso rodar o comando abaixo no bash
 Git pull origin master
 Pull significa literalmente puxar, eu estou mandando ele puxar os meus códigos e os arquivos bem como todo o meu repositório e suas alterações lá do meu repositório remoto, ele sabe qual é o repositório graças ao “apelido” que a gente deu pra ele quando eu adicionei um repositório. 
+
+HTML 5 E CSS3
+Definição
+Tim bernes-lee
+HTML 1 – 1991
+HTML 2 – 1995
+HTML 3 – 1997
+HTML 4 – 1997
+HTML 5 – 2014
+ 
+
+					ESTRUTURA BASICA
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+HTML5
+Definição e estrutura básica
+Em 1991 Tim Berners-Lee criou essa linguagem de marcação para melhorar a comunicação entre ele e seus colegas de trabalho no CERN, desde então já surgiram 5 versões e o HTML se tornou a base da web.
+Com o HTML definimos o significado e a estrutura do conteúdo da web e, além de texto, nossas páginas precisam de imagens, vídeos e vários outros formatos e para isso temos os elementos HTML.
+Um elemento HTML é formado pela tag de abertura e seus atributos, o conteúdo e uma tag de fechamento. E mais a frente veremos que existem elementos que não tem tag de fechamento.
+Com esses elementos podemos agrupar tipos de conteúdo, alterar tamanho e forma de fontes e adicionar diferentes mídias ao nossa página na web.
+E agora podemos ver como é a estrutura básica de um arquivo HTML.
+A primeira linha do documento deve ser o <!DOCTYPE html>, apesar de parecer um elemento HTML ela apenas diz ao navegador que ele está lidando com um arquivo do tipo HTML5. Os elementos HTML vem logo abaixo.
+<html>
+A tag html é a raiz do seu documento, todos os elementos HTML devem estar dentro dela. E nela nós informamos ao navegador qual é o idioma desse nosso documento, através do atributo lang, para o português brasileiro usamos pt-BR.
+<head>
+A tag head contém elementos que serão lidos pelo navegador, como os metadados - um exemplo é o charset, que é a codificação de caracteres e a mais comum é a UTF-8, o JavaScript com a tag script, o CSS através das tags style e link - veremos a diferença quando falarmos sobre CSS - e o título da página com a tag title.
+<body>
+E dentro da tag body colocamos todo o conteúdo visível ao usuário: textos, imagens, vídeos.
+Prática
+Como exercício para esse curso iremos construir um site pessoal, e precisamos começar com a estrutura básica que acabamos de ver.
+Vamos criar um arquivo index.html e adicionar o doctype e os elementos html, head e body.
+Depois adicionaremos os elementos meta e title, no primeiro adicionamos o atributo charset com o valor UTF-8 para dizer ao navegador qual é a codificação dos caracteres e no segundo podemos colocar nosso nome.
+E por último escreveremos nosso nome dentro do elemento body apenas para enxergarmos isso no navegador.
+Semântica
+Durante muitos anos o elemento padrão no HTML era a div, construíamos nosso conteúdo todo baseado nela, e assim nascia a sopa de divs.
+Mas em 2014 saiu a quinta versão do HTML, e com ela vieram vários mudanças importantes, como performance e acessibilidade, mas nesse curso introdutório vamos focar na semântica.
+A semântica nos permite descrever mais precisamente o nosso conteúdo, agora um bloco de texto não é apenas uma div, agora é um article e tem mais significado assim. E temos vários elementos para ressignificar as divs:
+<section>
+Representa uma seção genérica de conteúdo quando não houver um elemento mais específico para isso.
+<header>
+É o cabeçalho da página ou de uma seção da página e normalmente contém logotipos, menus, campos de busca.
+<article>
+Representa um conteúdo independente e de maior relevância dentro de uma página, como um post de blog, uma notícia em uma barra lateral ou um bloco de comentários. Um article pode conter outros elementos, como header, cabeçalhos, parágrafos e imagens.
+<aside>
+É uma seção que engloba conteúdos relacionados ao conteúdo principal, como artigos relacionados, biografia do autor e publicidade. Normalmente são representadas como barras laterais.
+<footer>
+Esse elemento representa o rodapé do conteúdo ou de parte dele, pois ele é aceito dentro de vários elementos, como article e section e até do body. Exemplos de conteúdo de um <footer> são informações de autor e links relacionados.
+<h1>-<h6>
+Eles não foram criados na versão 5 do HTML e nem são específicos para semântica, mas servem para esse propósito. São utilizados para marcar a importância dos títulos, sendo <h1> o mais importante e <h6> o menos. Uma dica: use apenas um <h1> por página, pois ele representa o objetivo da sua página.
+Prática
+Dando continuidade ao nosso site iremos montar sua estrutura. Pensei em adicionarmos um cabeçalho com nosso nome, uma lista de posts (como um blog) e um rodapé para nossos contatos.
+Vamos abrir nosso arquivo index.html e começar pelo cabeçalho: criamos um <header> logo abaixo do <body> e colocamos o título da nossa página dentro de um <h1>.
+Depois criaremos a lista de postagens: abrimos um elemento section e dentro dele adicionamos outro <header> contendo um <h2>. Notem que eu posso ter mais de um <header> na página.
+Para criar nossa postagem adicionamos um <article> com um <header> e um <h3>.
+O último passo desta etapa é criar um rodapé para nossas informações de contato: crie um elemento footer antes de fechar o </body>.
+Não se preocupe com o layout e com conteúdo da página, nós vamos tratar isso mais a frente.
+Textos e links
+A criação do HTML foi motivada pela necessidade de compartilhar textos e documentos, e mesmo depois de quase 30 anos, com toda a evolução da web, isso ainda representa uma boa parte do conteúdo da web.
+Já falamos anteriormente sobre os elementos h1-h6 e, eles são essenciais para nos indicar visualmente a importância e localização de seções de texto na página, mas para textos maiores e mais densos usamos o elemento p.
+O <p> representa um parágrafo, mas ele não suporta apenas texto, podemos adicionar imagens, código, vídeos e vários outros tipos de conteúdo dentro dele.
+Um outro elemento interessante e extremamente necessário na web é o <a> - que significa anchor/âncora, ele representa um hyperlink, é ele que interliga vários conteúdos e páginas na web.
+O elemento a tem vários atributos, mas vamos focar em dois, o href e o target.
+O href representa o hyperlink para onde sua âncora aponta, pode ser uma página do seu ou de outro site, um e-mail e até mesmo um telefone, os dois últimos precisam dos prefixos mailto: e tel:, respectivamente.
+O target neste momento vai servir para nos ajudar a abrir nossos links em outra aba do navegador usando o valor _blank.
+Prática
+Vamos adicionar um texto fictício a nossa postagem: logo após o fechamento do </header> vamos adicionar um elemento p e inserir um texto que vamos retirar do site lipsum.com
+E em alguma parte deste texto vamos adicionar um hiperlink para outra página e um para nosso e-mail.
+Criarei um hyperlink para meu perfil no LinkedIn: adicione o hyperlink no atributo href e o valor _blank no atributo target, assim o link será aberto em outra aba. E em algum outro lugar do texto adicionarei meu e-mail e um link para ele, desta forma: <a href="mailto:lucas@vilaboim.com" target="_blank">lucas@vilaboim.com</a>
+Imagens
+A web também é feita de imagens e para representá-las temos o elemento <img>, ele é um daqueles elementos sem tag de fechamento.
+O elemento img é bem simples, contendo apenas 2 atributos próprios, o src e o alt.
+O src é obrigatório e guarda o caminho para a imagem que você quer mostrar na página.
+O alt não é obrigatório mas é altamente recomendado por melhorar a acessibilidade, ele mostra a descrição da imagem caso ela não carregue e leitores de tela usam esse atributo para descrever a imagem para o usuário saber o que ela significa.
+Prática
+Vamos adicionar uma imagem ao cabeçalho da página e uma imagem a postagem.
+Primeiro vamos colocar as imagens na pasta do nosso projeto. Para a imagem do cabeçalho eu escolhi uma foto minha com 100 pixels de largura e 100 pixels de altura e para a imagem da postagem eu procurei por html code no site Unsplash, escolhi uma das imagens e deixei ela com 960 pixels de largura por 322 pixels de altura.
+Dentro do primeiro <header> da página e antes do <h1> iremos adicionar um elemento img e no atributo src colocamos o caminho para a nossa foto, /lucas-vilaboim.jpg, e o atributo alt deve conter um significado para a imagem, como no meu caso é uma ilustração, colocarei Ilustração do rosto de Lucas Vilaboim.
+E dentro do <header> do <article> vamos fazer a mesma coisa, mas agora depois do <h3>, e no atributo alt colocaremos Editor de texto mostrando códigos HTML.
+Listas
+Os últimos elementos que veremos neste módulo são os relacionados a listas: <ul>, <ol> e <li>.
+Listas servem para agrupar uma coleção de itens, como uma lista de ingredientes ou, como será no nosso caso, uma lista com contatos.
+O elemento ul cria uma lista não ordenada, onde a ordem dos elementos não é importante, e é representada com pontos, círculos ou quadrados.
+O <ol> serve para criar lista ordenadas, nessas a ordem importa, portanto elas são representadas com números, algarismos romanos ou letras.
+E o elemento li é um item dentro de uma dessas listas. Um <li> pode conter vários tipos de conteúdos, como parágrafos, imagens e até outras listas.
+Prática
+Adicionaremos uma lista de contatos ao rodapé da nossa página, e para isso usaremos também o elemento a que vimos anteriormente.
+Crie um elemento ul e dentro dele adicione um <li> com um elemento a, no atributo href adicione o link de alguma rede social que você mantenha e, no conteúdo da âncora coloque o nome dessa rede.
+
+					CSS3
+ 
+ 
+
+ 
+
+ 
+
+CSS 3
+Definição e seletores
+Após a criação do HTML a necessidade de formatar as páginas ficou evidente, assim, em 1996, foi criada a linguagem de estilo que conhecemos por CSS.
+A sintaxe é bem simples e pode ser explicada com a frase "você cria regras de estilo para elementos ou grupos de elementos".
+Vamos usar um elemento HTML que vimos anteriormente, a âncora <a>, para exemplificar.
+Uma regra CSS é representada por um seletor ou um grupo de seletores, no nosso caso é o <a>, então dentro de um par de chaves adicionamos as declarações, no exemplo acima estamos alterando cor e tamanho da fonte dessa âncora, as declarações são formadas por uma propriedade e um valor.
+Percebam que podemos colocar vários seletores em uma regra separando-os por vírgula.
+E há um último detalhe nesse exemplo: a pseudo-classe. Elementos HTML sofrem alterações causadas pela interação do usuário, como mover o mouse por cima ou clicar nesse elemento.
+O a:hover do exemplo significa que a âncora também terá essa aparência quando o usuário passar o mouse por cima de um hyperlink.
+ 
+ID x Classe
+No exemplo anterior criamos uma regra que altera um elemento HTML diretamente, mas isso significa que todos os elementos <a> ficarão com aquela aparência, e normalmente temos sites mais complexos que precisam de várias regras diferentes para elementos iguais.
+Para ficar mais tangível vamos relembrar um pouco o site que começamos a fazer no módulo passado, ele tinha vários elementos header, mas não vamos querer que o header principal tenha a mesma formatação que o header de uma postagem, é aí que entram os IDs e Classes.
+O seletor que vimos no primeiro exemplo é um seletor de tipo, pois ele representa um elemento HTML, e com IDs e Classes podemos representar qualquer tipo de elemento mas há algumas diferenças entre eles:
+ID: é representado pelo símbolo # (hash) seguido de um nome para esse ID.
+Classe: a classe é representada de forma parecida do ID, mas é precedida por um ponto em vez do hash.
+E a diferença mais importante entre eles é a forma como devem ser usados: o ID só pode ser usado uma vez em uma página HTML enquanto a classe não tem restrições.
+ 
+Exercício
+Vamos adicionar algumas classes no nosso site e alterar alguns elementos, mas antes precisamos adicionar um arquivo CSS a nossa página.
+No módulo de HTML descobrimos que podemos adicionar CSS de duas formas, com o elemento style, e assim suas regras ficarão no arquivo HTML, ou podemos criar um arquivo CSS e adicioná-lo na página através do elemento link, e é essa forma que usaremos.
+Crie um elemento link dentro do head do seu arquivo e adicione os atributos rel="stylesheet" e href="style.css", o rel denota o tipo de arquivo que estamos incluindo na página e o href é o caminho para o arquivo. E na mesma pasta do arquivo HTML crie um arquivo chamado style.css.
+Agora sim vamos ao CSS, adicione um ID #title ao h1 da página, pois queremos que ele seja único, e depois adicione as classes .subtitle e .post_title ao h2 e h3, respectivamente.
+No arquivo CSS vamos mudar a cor desses três títulos, e depois alterar o tamanho da fonte do título da postagem.
+ 
+Box-model
+Quando estamos criando o layout de um site o navegador representa cada elemento HTML  como uma caixa retangular, isso é o box-model. E com CSS nós alteramos a aparência dessa caixa (largura, altura, cor de fundo, etc.). Essa caixa é composta por 4 áreas: o conteúdo, o padding, a borda e a margem.
+•	As margens (margin) são espaçamentos entre elementos;
+•	As bordas (border) ;
+•	O padding é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele;
+•	O conteúdo (content) é o que o seu bloco representa, um texto, uma imagem, um vídeo;
+ 
+Exercício
+Para enxergamos o box-model vamos adicionar cores e bordas a alguns elementos.
+Primeiro adicionaremos uma cor de fundo para a visualização ficar mais fácil, usaremos a propriedade background com o valor #fcfcfc no elemento body.
+Depois vamos adicionar uma classe ao <article>, pode ser .post, e então vamos colocar a cor branca de fundo com a propriedade background e o valor #FFF. Agora conseguimos enxergar o content do box-model.
+Vamos adicionar um padding de 10 pixels neste mesmo article. Perceberam o espaçamento que surgiu em volta do nosso conteúdo?
+Agora adicionamos um borda mais escura a ele com a propriedade border. Vou falar mais detalhadamente sobre border mais a frente, mas por enquanto vamos deixar essa borda com 3 pixels de largura, o contorno sólido e a cor azul.
+E por último vamos adicionar uma margem do lado de fora do post com a propriedade margin e o valor 10 pixels.
+E agora inspecionando o nosso elemento conseguimos todas aquelas camadas citadas antes: o conteúdo em azul, o padding em verde, as bordas em marrom e as margens em laranja.
+E já que começamos a falar sobre bordas e cor de fundo, no próximo vídeo vamos nos aprofundar nessas propriedades.
+ 
+Estilizando elementos
+Agora que entendemos o box-model podemos focar em deixar nosso site mais bonito, então vamos repassar pelas propriedades já citadas:
+Padding e Margin
+Anteriormente usamos o padding e o margin da forma mais básica, com apenas um valor, mas eles são mais poderosos que isso. Se quisermos atribuir tamanhos diferentes para cada lado do box nós podemos, e vamos ver três formas de fazer isso.
+ 
+A primeira é colocando um valor para as partes superior e inferior e depois para os lados esquerdo e direito.
+O valor de 10 pixels se refere ao eixo Y, ou partes superior e inferior, e os 5 pixels se referem aos lados esquerdo e direito.
+ 
+A segunda forma é dando valores para cada lado do box.
+Então começamos pelo topo com 15 pixels, passamos o lado direito com 10 pixels, depois para a parte inferior com 5 pixels e por último o lado esquerdo com 0, e sempre nessa ordem.
+Uma boa dica também é que quando o valor for 0 não precisamos não precisamos colocar a unidade.
+ 
+A terceira forma é com as propriedades específicas para cada lado, até agora tínhamos visto atalhos para essas propriedades.
+Essa opção é mais usada quando temos o mesmo valor para 3 lados, e o quarto precisa ter um valor diferente, então usamos o padding com apenas um valor e uma dessas opções para representar o lado diferente.
+ 
+Background
+A propriedade background também é um atalho para várias propriedades, mas isso vocês podem absorver aos poucos, e uma boa opção de leitura é a documentação do MDN.
+Por enquanto veremos apenas como mudar a cor de fundo.
+ 
+E aqui temos 3 formas de colocar uma cor de fundo, e ainda existem outras.
+A primeira é pelo nome da cor em inglês, a segunda é pelo código hexadecimal e a terceira é usando apenas o atalho background.
+ 
+Border
+Vimos que a propriedade border pode ter 3 valores: a largura, a cor e o estilo, mas existem algumas particularidades nisso.
+A largura pode ser usada com várias unidades, como px, em e mm. A cor pode ser atribuída pelo nome ou por um código hexadecimal, assim como fizemos com o background, e o estilo é representada por palavras-chave, vamos ver algumas delas:
+ 
+solid: mostra uma borda simples e reta;
+dotted: são bolinhas com um pequeno espaçamento entre elas;
+dashed: forma uma linha tracejada.
+E aproveitando que mostrei esse código temos que falar sobre como separar a estilização dos lados de uma borda.
+E se você não quiser usar a propriedade border existem as propriedade específicas para cada aspecto de uma borda, são elas border-width para a largura, border-color para a cor e border-style para o estilo.
+Aqui temos o mesmo código anterior de duas formas diferentes, a primeira com o atalho border e a segunda com cada propriedade específica.
+E depois disso podemos juntar os lados com os aspectos de uma borda e criar uma regra mais específica ainda.
+ 
+Border-radius
+E a última propriedade é o border-radius, ele permite arredondar os cantos de um elemento. Podemos usar várias unidades, mas as mais comuns são os pixels e a porcentagem.
+Colocando apenas um valor mudamos todos os cantos do elemento, mas seguindo aquela mesma ordem que vimos no padding e margin - topo, direita, inferior e esquerda -  conseguimos alterar cada canto separadamente.
+ 
+Exercício
+Neste exercício vamos deixar o nosso site um pouco mais bonito usando as propriedades que acabamos de ver.
+Vamos aumentar o padding para 15 pixels e colocar uma margem de também de 15 pixels só na parte de baixo do post.
+Quando olhamos para os textos percebemos que os espaçamentos estão diferentes do restante do post, então vamos padronizar isso.
+No título do post vamos retirar todas as margens para depois colocar apenas uma margem inferior de 15 pixels. E no corpo do post precisamos adicionar uma classe e remover todas as margens para depois adicionar uma margem superior de 15 pixels.
+Podemos manter o background branco, mas vamos diminuir a largura das bordas para 2 pixels e mudar a cor para a mesma do texto - #505050 - e por último adicionaremos um border-radius, 5 pixels são suficientes. Podemos adicionar esse mesmo de valor de border-radius na imagem, para isso vamos acrescentar uma class a imagem antes.
+ 
+Estilizando textos
+Já sabemos que podemos mudar cor e tamanho de algumas fontes, e agora vamos nos aprofundar nisso.
+ 
+font-family
+Com o font-family podemos alterar a fonte dos nossos textos, como uma fonte da internet ou uma que esteja instalada no nosso computador, mas vamos nos ater às fontes seguras, chamadas de web safe fonts.
+Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação.
+ 
+font-size
+O font-size nos ajuda a mudar o tamanho do texto, existem algumas unidades de medida para ele mas por enquanto os pixels são suficientes para nós.
+ 
+font-style
+Usamos o font-style para tornar um texto itálico, na maioria das vezes você usará apenas o valor italic para ele, mas se precisar tirar o itálico de um texto você pode usar o valor normal.
+ 
+
+ 
+Padding: 10px 5px;
+Quando eu vou estilizar meu documento e coloco apenas dois valores de tamanho de padding, como na imagem acima, o primeiro valor se refere ao padding superior e inferior, e o segundo valor se refere ao padding da direita e esquerda
+
+ 
+Padding: 15px 10px 5px 0;
+Ao colocar os quatro valores a distribuição funciona da seguinte forma:
+Cima, direita, baixo e esquerda
+Dessa forma eu tenho que o paddind-top teria 15px, padding-rigth 10px, padding-bottom 5px e padding-left 0px.
+
+ 
+Quando eu quero colocar um tamanho especifico em cada padding também é possível fazer da forma acima.
+BACKGROUND
+ 
+
+BORDER
+
+A minha borda eu posso ter a largura em pixels, centímetros, milímetros...
+A cor pode ser representada tanto pelo nome da cor (blue) como também em códigos(#0000ff).
+Para estilo eu tenho solido, pontilhada, tracejada...
+ 
+
+ 
+ 
+ 
+BORDER RADIUS
+Ele permite arredondar os cantos dos elementos, ele tem vários estilos de medidas, mas o mais comum é em porcentagem
+ 
+
+				ESTILIZANDO TEXTOS
+
+				ALTERANDO ESTILO DA LETRA
+ 
+Font-family:Verdana;
+
+			ALTERANDO TAMANHO DA LETRA
+ 
+Font-size:18px;
+
+
+			ALTERANDO ESTILO DA LETRA
+ 
+Font-style:normal;
+Font-style:italic;
+
+				ALTERANDO O PESO DO TEXTO
+ 
+Font-weight: bold;
+
+
+				TRANSFORMANDO O TEXTO
+ 
+Text-transform: uppercase/ lowercase/ capitalize;
+
+				ESTILIZANDO LISTAS
+ 
+O list-style-type altera o marcador da lista, é possível mudar para um quadrado, para algarismos romano, e entre outros
+Ul{
+	List-style-type: square/ Upper-roman/ “\1F44D”;
+}
+
+ 
+Também é possível colocar imagens personalizadas como marcador da lista, quem se encarrega disso é o list-style-image: url(caminho da imagem ou nome da imagem);
+
+
+				DIMENSÃO E ALINHAMENTO
+Width - largura
+Height – altura
+
+Max-width – largura máxima
+Max-height – altura máxima 
+Margin – margem 
+Text-align – alinhamento do texto.
+
+MARGEM AUTOMATICA
+Margin: auto; -> ela irá se adequar ao tamanho da tela e sempre mantendo os elementos centralizados
+
+				JAVASCRIPT ES6 ESSENCIAL
+
+Historia
+Lançado em setembro de 1995
+Criado por Brendan Eich
+
+ECMAScript
+TC39
+Github: https://github.com/tc39
+https://github.com/tc39/proposals
+
+Fluxo de proposta:
+	Stage 0: strawman
+	Consiste em apresentar um formulário com a ideia para melhorar o ecmascript, elas devem ser feitas por um membro ou contribuidor registrado no tc39. Nessa etapa o documento precisa ser revisado e depois e adicionado as paginas da proposta com stage 0.
+	Stage 1: Proposal
+	É nessa etapa que surge a proposta formal da funcionalidade, é nessa etapa que tem um campeão e necessita ser membro da tc39, ela precisa ser bem descrita e conter exemplos. Caso ela seja aceita o tc39 vai analisar e contribuir com ela.
+	Stage 2:Draft
+	E quando é lançado a primeira versão dessa proposta que tem a especificação. É obrigatório uma descrição formal da semântica e sintaxe da funcionalidade, duas implementações são importantes, sendo que uma delas é as possíveis melhorias futuras que virão.
+	Stage 3: candidate
+	Proposta esta quase pronta, agora ela precisa de um feedback de implementação e de usuários. A especificação precisa estar completa, o editor do tc39 precisa assinar ela.
+	
+	Stage 4: finished
+	Ela esta pronta para ser incluída na especificação mas ainda ela tem alguns pontos para progredir, é obrigatório ela estar passando na twitch de testes, tem que ter duas implementações em conformidade com a especificação que passe no teste, tem que ter uma experiencia pratica na implementação baseada no feedback, e o editor deve assinar essas especificações.
+	Ultima especificação lançada: ES2018
+		Operadores rest/spread
+		Literação assíncrona
+		Promise.prototype.finally()
+	ES.Next
+		Implementações com futuras especificações, caso queira testa é so usar o app babel.
+				CONCEITOS JAVASCRIPT
+Linguagem interpretada.
+Isso significa que o código é executado de cima para baixo e o resultado é apresentado logo em seguida
+Tem tipagem fraca e dinâmica, ou seja, é possível usar o operador “+” com uma string sem que isso necessariamente gere um erro em seu programa, e tipagem dinâmica significa que não é necessário informar o tipo da variável na sua declaração, ele irá saber o tipo através do valor e não de uma declaração de tipo, isso se chama inferência de tipo.
+minhaVariavel = 30
+minhaVariavel = ‘nome’
+console.log(minhaVariavel)
+TypeScript – Programa que consegue adicionar tipos e funcionalidades que o Javascript não tem por padrão, você escreve o código em typescript e ele converte para Javascript
+
+Funções de primeira classe e ordem maior
+Isso significa que as funções em Javascript podem ser passadas como valores de variáveis, atribuída a uma estrutura de dados (obejct, array) ou ela pode ser passada como um argumento e ate retornada por outras funções.
+
+Closure
+É a capacidade de uma função lembrar do ambiente em que foi criada. Java tem três tipos de escopo : global, de função e de bloco.
+OBS: JAVA SCRIPT PERMITE CHAMAR A MESMA FUNÇÃO VARIAS VEZES NA MESMA LINHA. EX: INIT()()()() / EU CHAMEI A FUNÇÃO INIT QUATRO VEZES
+
+Currying
+É a técnica de transformar uma função que recebe n parâmetros em uma função que recebe apenas um parâmetro. E para cada parâmetro retorna uma função.
+
+Hoisting
+Significa levanta ou suspender algo, ocorre em declarações de funções ou variáveis.
+Existem dois tipos: de variáveis e de funções
+O de variáveis eleva só a sua criação
+O da função é elevado como um todo
+Isso significa que no Javascript eu posso chamar uma função antes mesmo de declarar ela e ainda sim ter o valor esperado, porém quando se trata de variáveis não é possível fazer isso, a variável poderá ser chamada e usada, mas ela não terá nenhum valor, pois o valor foi definido posteriormente
+Ex:
+Let nome
+Console.log(nome)
+Nome = ‘Pedro’
+Console.log(nome)
+Saída:
+Undefinided
+Pedro
+
+Log(‘Meu nome é pedro’)
+Function log(text){
+	Console.log(text)
+}
+
+Imutabilidade
+Os dados da variável não mudam, para mudar o valor de um objeto,item ou array a gente cria um novo baseado nesse atual, e assim você altera o que você deseja.
+
+OBS: existe uma propriedade em Javascript que permite que em um objeto que filtre o valor, funciona da seguinte forma:
+studentsList.filter(students => students.grade >= 7)
+eu estou dizendo aqui que a minha studentsList vai receber do meu objeto students apenas os valores onde grade for maior ou igual a 7.
+
+	
+				TIPOS E VARIAVEIS
+Var 
+Let
+Const
+
+Ao usar o const com uma variável do tipo primitivo, eu não consigo mudar o seu valor.
+Porem quando se usa o const com objetos ou então arrays é possível alterar o valor das propriedades dentro do objeto, como por ex user.nome. E ao usar com arrays é possível mudar os valores dentros do array, adicionar, excluir mas não é possível declarar um novo array com o mesmo nome.
+Const nomes = [‘pedro’, ‘lucca’]
+Nomes.push(‘jv’)  -> permite
+Nomes.shift() -> não permite
+Nomes[0] = ‘marcos’ -> permite
+Nomes = [‘lucca’, ‘pedro’] -> não permite
+
+Tipos
+String						undefinided
+Number					object
+Boolean					array
+Null						function
+symbol
+
+					FUNÇÕES PARA STRINGS
+‘texto’.split(‘X’)
+Retorna um array quebrando a string por um delimitador
+
+‘texto’.replace(‘text’, ‘txet’)
+Busca por um valor e substitui por outro
+
+‘texto’.slice(-1)
+Retorna a fatia de um ‘valor’
+
+‘texto’.slice(0, -1)
+Retorna o valor de uma string menos da ultima
+
+‘texto’.slice(1)
+ Valor da string da segund letra ate a ultima
+
+‘texto’.substr(0,2)
+Ele retorna N caracters a partir de uma posição.
+				
+					FUNÇÕES PARA NÚMERO
+Const MyNumber = 12.4030
+
+MyNumber.ToString()
+Numero transformado em string
+
+MyNumber.ToFixed(2)
+Numero com duas casas decimais após virgula
+
+parseFloat(’13.22’)
+String transformada em numero float
+
+parseInt(’13.22’)
+String transformada em numero inteiro
+
+
+OBS: TYPEOFF RETORNA O TIPO PRIMITIVO DA VARIAVEL
+
+					OBJECT
+User {
+	name: ‘pedro’
+
+}
+Alterando a propriedade de um objeto
+User.name = ‘outro nome 1’
+user[‘name’] = ‘outro nome 2’
+
+const prop = ‘nome’
+user [prop] = ‘outro nome3’
+
+criando uma propriedade
+user.lastname = ‘arruda’
+
+deletando uma propriedade
+delete user.name
+
+recuperando as chaves de um objeto
+Object.keys(user)
+
+
+recuperando os valores de uma chave de um objeto
+Object.values(user)
+
+Retornando um array de arrays contendo [nome_propiedade, valor_propiedade]
+Object.entries(user)
+
+Margeando propriedades de um objeto
+Object.assign(user, {fullName: ‘Pedro Alves Arruda’})
+
+Margeando dois ou mais objetos
+Object.assign({}, user, {age:26})
+OBS: Ao margear objetos, é melhor fazer da segunda forma pois assim ele está criando um novo objeto com base no antigo e ainda adicionando a nova propriedade que você criou, isso é bom pois assim o objeto original continua imutável.
+
+Object.freeze(newObj)
+Ele irá congelar a estrutura do meu objeto newObj não permitindo alterações, assim não será possível deletar valores, adicionar campos e etc... 
+
+Object.seal(person)
+Ele irá permitir apenas a alteração das propriedades já existentes, não pode criar nem apagar as propriedades.
+
+				Symbols
+Const symbol1 = symbol(‘name’)
+Const symbol2 = symbol(‘name’)
+
+Symbols são únicos, ou seja, mesmo eles tendo o mesmo “valor” o js ainda irá dizer que eles são diferentes e irá trata-los assim
+
+Acessando um symbol dentro de um object
+Object.getOwnPropertySymbols(user)
+ele irá retornar apenas os meus valores symbols que contem dentro do meu objeto user
+acessando todas as propriedades de um objeto
+Reflect.ownKeys(user)
+
+Usando o symbol para criar um enum
+Const directions = {
+	UP : symbol(‘UP’),
+	LEFT: symbol(‘LEFT’),
+	RIGHT: symbol(‘RIGHT’),
+	DOWN: symbol(‘DOWN’)
+}
+
+					FUNÇÕES
+Posso declarar uma função de algumas formas, dentre elas temos:
+Function fn(){
+	Return ‘code here’
+}
+Const arrowFn = () => ‘code here’
+Const arrowFn2 = () => {
+	Return ‘code here’
+}
+
+FUNÇÕES TAMBEM SÃO OBJETOS E EU POSSO CRIAR PROPRIEDADES PARA ELAS 
+ Fn.prop = ‘posso criar propriedades’
+Console.log(fn.prop)
+
+					ARRAYS
+Let pessoas = [] //declaração simples
+Let pessoas = [‘pedro’, ‘lucca’, ‘joao victor’, ‘juninho’] // declaração passando alguns valores
+Const gender {
+	MAN: Symbol (‘M’),
+	WOMAN: Symbol(‘F’)}
+//abaixo uma declaração de um array de objetos
+
+Let pessoas[
+{name:’Pedro’
+Age: 22
+gender: gender.MAN}
+{name:’Lucca’
+Age:23
+Gender:gender.MAN}
+
+{name:’Joao victor’
+Age: 17
+Gender: gender.MAN}
+
+{name:Juninho
+Age:13
+Gender: gender.MAN}
+]
+
+Pessoas.length => retorna o tamanho do array
+Array.isArray(pessoas)=> verifica se é um array
+Pessoas.forEach(pessoas =>{
+	Console.log(`nome: ${pessoas.name}`)
+}) =>iterar os itens de um array
+
+Const mens  = pessoas.filter (pessoas => pessoas.gender === gender.MAN) => filtra o array
+
+Const pessoasComCurso = pessoas.map( pessoas =>{
+	Pessoas.curso = ‘Introdução a java script’
+	Return curso
+]) => retorna um novo array
+Const totalIdadeTotal = pessoas.reduce(idade, pessoas) =>{
+	idade +=  pessoas.idade;
+	return idade;
+
+}, 0) => transforma um array em outro tipo;
+
+Nessa função de arrays, ela recebe dois parâmetros onde o primeiro é uma função com dois parâmetros(primeiro é a variável que vai ser retornada, segundo é o meu objeto) e o segundo parâmetro é o valor inicial da variável que será retornada da minha função que foi passada como primeiro parâmetro.
+
+Const  totalIdadesPar = pessoas
+				.filter (pessoas => pessoas.idade % 2 === 0)
+				.reduce(idade, pessoas) =>{
+					Idade += pessoas.idade
+					Return idade
+}, 0); => juntando operações, ele ira retornar a soma da idade das pessoas com idade PAR
+
+
+OPERADORES
+Aritméticos
+Atribuição
+Comparação
+Condicional
+Lógicos
+
+Aritmeticos
+%(modulo) => retorna o numero inteiro do resto da divisão
+ex: 2 % 2 = 0
+
+X++ = ele usa o valor X e depois soma mais um
+++X = ele soma mais um e depois usa o novo valor de X
+
+-3 // ele esta negando o 3, seria o mesmo que –(3)
++’3’ // ele converte pra numérico, o operador mais tem esse poder, como se fosse um parseInt
++true // retorna 1
++false //retorna 0
+-true //retorna -1
+
+Exponenciação (**)
+2 ** 3
+
+Atribuição
+X = y => atribuição
+
+X = x + y / x += y => atribuição de adição
+
+X = x – y/ x -= y => atribuição de subtração
+
+X = x * y/ x *= y => atribuição de multiplicação
+
+X = x / y  ou  x /=y => atribuição de divisão
+
+X = x % y / x %= y => atribuição de resto de divisão
+
+
+Comparação
+Igual (==)
+Retorna verdadeiro caso os operadores sejam iguais 
+‘3’ == vari
+3 == ‘3’
+
+Não igual (!=)
+Retorna verdadeiro caso os operadores não sejam iguais
+Var2 != ‘3’
+
+Estritamente igual (===)
+Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo, vejam também object.is e igualdade
+3 === var1
+Estritamente não igual (!===)
+Retorna verdadeiro caso os operandos não sejam iguais e do mesmo tipo
+Var1 !=== ‘3’
+3 !=== ‘3’
+
+Maior que (>)
+Retorna verdadeiro caso o operando da esquerda seja maior que o da direita	
+Var1 > 3
+‘12’ > 3
+
+Maior que ou igual (>=)
+Retorna verdadeiro caso um valor seja maior ou igual a outro
+12 >= var1
+12 >= 12
+
+Menor que (<)
+Retorna verdadeiro caso determinado valor seja menor que outro
+Var1 < 12
+12 < ‘12’
+
+Menor que ou igual (<=)
+Retorna verdadeiro caso determinado valor seja menor ou igual a outro
+12 <= 12
+Var1 <= 12
+
+Ternário
+Caso a condição seja verdadeira ele retorna o primeiro valor, caso seja falso o segundo
+Ex:
+Let resp = (var1 <= 12 ? ‘e sim’ : ‘e não’)
+Let resp = (var1 === 12? True : False)
+
+Logicos
+And  lógico (&&) // retorna true apenas se as duas condições forem verdadeiras
+ Exp1 && exp2
+
+Var a1 = true && true; // retorna true 
+Var a1 = true && false; // retorna false
+Var a1 = false && true; // retorna false
+Var a1 = false && false; // retorna false
+
+Or logico (||) //retorna verdadeiro caso um dos valores seja verdadeiro
+Exp1 || exp2
+
+Var a1 = true || true; // retorna true 
+Var a1 = true || false; // retorna true
+Var a1 = false || true; // retorna true
+Var a1 = false || false; // retorna false
+
+Not logico (!)
+!exp1
+
+
+Var a1 = !true // retorna false
+Var a1 = !false // retorna true
+
+Instanceof => retorna se determinado objeto é uma instacia de uma classe
+Ex: Date dia = new Date(1999,25,05)
+if( dia instanceof Date){...} => ele irá retornar true, pois ele é
+
+			ESTRUTURA DE REPETIÇÃO E CONDICIONAL
+If, switch
+Ex:
+Const array = [0, 1, 2, 3, 4, 5]
+Array.forEach(item =>{
+	If (item % 2 ===0){
+	Console.log(`O numero ${item} é par`)
+} else{
+	Console.log(`O numero ${item} é impar`)
+}
+});
+Const fruta = ‘banana’
+Switch(fruta){
+	Case: ‘banana’
+	Console.log(‘A fruta é banana’)
+	Break
+	Case: ‘uva’
+	Break
+	Case: ‘laranja’
+}
+
+For, while, for – in, for-of, do-while, continue, break
+O for of se passa apenas por valores numéricos
+Ex : let lista = [3,5,7]
+List.nome = ‘pedro’
+
+for(let L of lista){
+	Console.log(i)
+}
+Ele NÂO ira imprimir a propriedade da minha lista, a propriedade nome.
+
+O continue pula uma iteração da minha estrutura de repetição
+Ex:
+Const lista = [1,2,3,4,5,6,7]
+For(let cont = 0; cont < lista.length; cont++){
+	If (lista[cont] % 2 === 0){
+	continue
+}
+	Console.log(lista[cont])
+}
+ Ele irá retornar apenas os números impares, pois os números pares ele ira pular devido ao continue dentro do if.
+
+				ORIENTAÇÃO A OBJETOS
+Herança 
+	Baseada em protótipos
+	Prototype
+	__proto__
+	Constructor
+
+‘use strict’
+Const myText = String(‘Hello prototype’)
+Console.log(myText__proto__.split)
+Eu estou criando a minha variável a partir do meu método construtor String, todo método construtor relaciona a variável a um __proto__
+Se eu retornar o meu myText.__proto__.split === String.prototype.split, eu vou ver que eles são iguais, e que um está relacionado ao outro.
+Assim como também o myText.constructor === String
+Assim eu tenho que o __proto__ -> prototype -> constructor
+Eu tenho que o proto aponta pro prototype que é construído a partir do construtor. 
+
+ 
+
+‘use strict’;
+Function Animal(){
+	This.qtdePatas = 4;
+}
+Const cachorro = new Animal();
+Console.log(cachorro.qtdePatas);
+
+Quando eu uso esse new Animal() eu estou um novo objeto é criado herdando o foo.prototype.
+A função construtora foo é chamada com argumentos específicos e com o ‘this’ vinculado ao novo objeto criado.
+Caso a função construtora tenho uma retorno explicito, será respeitado o seu ‘return’, senão, será retornado o objeto criado.
+
+Classes 
+	ES6
+	Simplificação da herança de protótipos	
+Palavra chave class
+
+Modificadores de acesso:
+	Privado/publico
+Design Patterns
+Padrões de criação 
+	Abstract factory
+	Builder 
+	Factory method
+	Prototype
+	Singleton
+
+Padrões comportamentais 
+Os padrões de comportamento se concentram nos algoritmos e atribuições de responsabilidades entre os objetos. Eles não descrevem apenas padrões de objetos ou de classes, mas também os padrões de comunicação entre os objetos.
+Chain os responsability
+Command
+Interpreter 
+Iterator
+Mediator
+Observer
+State
+Strategy
+Template method
+Visitor
+
+Patterns mais utilizados
+Factory
+Singleton
+Decorator
+Observer
+Module
+
+Singleton
+O objetivo desse pattern é criar uma única instancia de uma função construtora e retorna-la toda vez em que for necessário utiliza-la.
+Decorator
+Uma função decorator recebe uma outra função como parâmetro e estende o seu comportamento sem modifica-lo explicitamente.
+Observer 
+É uma pettern muito popular em aplicações Javascript. A instancia (subscriber) mantém uma coleção de objetos (observers) e notifica todos eles quando ocorrem mudanças no estado.
+Module
+É um pattern que possibilita organizarmos melhor o nosso código, sem a necessidade de expor variáveis globais 
+
+					
+						ARRAYS
+Const arr = [1, 2, 3];
+Const arr2 = new Array(1, 2, 3);
+
+Array.of -> cria uma nova instancia de arrays a partir do número de parâmetros informados.
+
+Array-> ele cria uma nova instancia de array de acordo com os parâmetros informados.
+Obs: se eu passar apenas um parameto, ele cria um array vazio e coloca o parâmetro como tamanho do array
+Ex: const arr = Array(3); -> cria um array de três posições;
+Por outro lado, se eu crio um array através da função array e passo mais de um parâmetro ele irá, colocar cada parâmetro em uma posição do meu array, começando na posição 0 e assim por diante.
+Ex: const arr = Array(3,2,4) -> arr [3, 2, 4]
+
+Array.from -> Cria uma nova instancia de array a partir de um parâmetro array-like ou iterable object.
+Const divs = document.querySelectorAll(‘div’);
+Const arr = Array.from(divs);
+O código acima transforma os meus elementos “div” do meu código em um array, pois no momento eles são um node list, após usar o Array.from ele se torna em um array e pode-se usar todas as funções de um array.
+			INSERIR OU REMOVER ELEMENTOS DE UM ARRAY
+
+PUSH
+Adicionar um ou mais elementos no final do array e retorna o tamanho do novo array.
+
+POP
+Remove o ultimo elemento de um array e retorna ele.
+
+UNSHIFT
+Adiciona um ou mais elementos no início  do array e retorna o tamanho do novo array.
+
+SHIFT
+Remove o primeiro item de um array e retorna
+
+SLICE
+Remove elementos de um array, o slice pode ser usado de varias formas, depende do parâmetro que for passado para ele.
+Arr.slice(0, 2) -> ele remove os elementos da posição 0 a 2, não incluindo a 2, ou seja, ele irá remover os elementos da posição 0 e 1;
+Arr.slice(2)-> remove a partir da posição dois em diante, incluindo a posição dois.
+Arr.slice(-1) -> ele remove a primeira posição ao inverso, ou seja, a ultima.
+Arr.slice(-3) -> ele remove os três primeiros elementos depois do ultimo
+
+SPLICE
+Altera um array adicionando novos elementos enquanto remove elementos antigos, pode ser usado de varias formas, dependendo do numero de parâmetros
+Arr.splice(2) -> remove os elementos a partir da segunda posição, incluindo a segunda.
+Arr.splice(0, 0, ‘first’)
+O primeiro parâmetro é a posição de inicio, é a partir dela que será feito a modificação.
+O segundo parâmetros é quantos itens eu irei remover.
+O terceiro é o que será adicionado a partir da primeira posição.
+
+FOREACH
+Iteração de cada item dentro de um array
+Const Arr = [1, 2, 3, 4, 5] 
+Arr.forEach((value, index) => {
+	Console.log(`${index}: ${value}`)
+}) 
+Ele ira retornar cada posição do meu array e sua posição.
+
+MAP
+Arr.map(value => value * 2)
+Ele ira retornar um novo array em que seus valores são todos os meus antigos valores multiplicados por dois
+
+Arr = [1, 2, 3, 4, 5]
+Arr.map(value => value * 2) -> [2, 4, 6, 8, 10]
+
+FLAT
+Retorna um novo array com todas os elementos de um sub-array concatenados de forma recursiva de acordo com a profundidade especificada(depth)
+Ex: const numeros2 = [1, 2, 3, [4, 5, 6, [7, 8, 9, 10]]]
+const numeros3 = numeros2.flat()
+numeros3 == [1, 2, 3, 4, 5, 6, Array(4)]
+const numeros5 = numeros2.flat(2)
+numeros5 == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+FLATMAP
+Retorna um novo array assim como a função map e executa um flat de profundidade
+Ex :
+numeros3.flatMap(value => [value * 2]) -> ele retorna o array com todos os valores dobrados e com um flat de profundidade
+
+
+
+KEYS
+Retorna um array iterator que contém as chaves para cada elemento do array
+Ex: const arr = [1, 2, 3, 4];
+Cons arrIterator = arr.keys();
+arrIterator.next() => retorna [value: 0, done: false]
+arrIterator.next() => retorna [value: 1, done: false]
+arrIterator.next() => retorna [value: 2, done: false]
+
+VALUES
+Retorna um array iterator que contem a chave e o seu valor
+Ex: const arr = [1, 2, 3, 4];
+Cons arrIterator = arr.keys();
+arrIterator.next() => retorna {value : [0, 1], done: false}
+arrIterator.next() => retorna {value: [1, 2], done: false}
+arrIterator.next() => retorna {value: [2, 3], done: false}
+
+
+					BUSCAR ELEMENTOS
+FIND 
+Retorna  o primeiro item de um array que satisfaz a condição
+Ex: 
+Const arr = [1, 2, 3, 4]
+Const maiorQueDois = arr.find(value => value > 2)
+Console.log(maiorQueDois) -> 3
+
+FINDINDEX
+Retorna o index do primeiro item de um array que satisfaz a condição.
+Ex: 
+Const arr = [1, 2, 3, 4]
+Const maiorQueDois = arr.find(value => value > 2)
+Console.log(maiorQueDois) -> 2
+
+FILTER
+Retorna um novo array com todos os elementos que satisfazem a condição
+Ex
+const numeros5 = [1, 2, 3, 4, 5, 6, 7]
+const allNumberLarggerTwo = numeros5.filter(value => value > 2) -> retorna [3,4,5,6,7]
+const allNumberLarggerTwo = numeros5.filter(value => value > 4) -> retorna [5,6,7]
+
+LASTINDEXOF()
+Retorna a ultima ocorrência de determinado valor em um array e retorna o valor do index
+numeros5 = [1, 2, 3, 4, 5, 6, 7]
+numeros5.push(4) -> adicionei um item no inicio
+numeros5 = [4,1, 2, 3, 4, 5, 6, 7]
+numeros5.unshift(4) -> adicionei um item no final
+numeros5 = [4,1, 2, 3, 4, 5, 6, 7, 4]
+numeros5.lastIndexOf(4) -> pesquisei qual a ultima ocorrência do numero quatro, ele retornou o index
+numeros5[8] -> pesquisei qual o valor no index retornado, valor 4 foi apresentado.
+
+SOME
+Retorna um booleano verificando se pelo menos um valor do array satisfaz a condição.
+
+Numeros5.some(value => value % 2 == 0) -> retorna true pois existe pelo menos um valor par no array
+
+EVERY
+Retorna um booleano verificando se todas os itens de um array satisfazem a condição
+Numeros5.every(value => value % 2 == 1) – retorna false pois não são todos os números do meu array impares
+
+
+SORT
+Ordena os elementos de um array de acordo com determinada condição
+
+REVERSE
+Inverte a ordem do meu array
+
+JOIN
+Junta todos os elementos do meu array, separados por um delimitador e retorna uma string
+numeros5.join() -> '4,1,2,3,4,5,6,7,4'
+numeros5.join('=') -> '4=1=2=3=4=5=6=7=4'
+
+REDUCE
+Retorna um novo tipo de dado literando cada posição de um array
+numeros5.reduce((total, value) => total += value, 0) -> 36
+ele pegou a minha variável total, e somou com cada valor de value, value foi cada um dos meus valores do meu array. O ultimo 0 passado como parâmetro é o meu valor inicial da variável total.
+
+
